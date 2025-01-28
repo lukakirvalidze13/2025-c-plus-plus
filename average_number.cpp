@@ -10,7 +10,7 @@ float avg, sum = 0;
 int length;
 length = sizeof(numbers) / sizeof(numbers[0]);
 for(int number : numbers){
-    sum += number;
+    sum = sum + number;
 }
 
 avg = sum / length;
