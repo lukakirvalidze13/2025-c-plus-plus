@@ -22,7 +22,32 @@ YES*/
 NO*/
 
 
+    int n;
+    cin >> n;
+    int m;
+    cin >> m;
+    int arr[m];
+    for(int i = 0; i<m; i++){
+        cin >> arr[i];
+    }
+    int sum = 0;
+    for(int i : arr){
+        sum+=i;
+    }
+    if(sum < n){
+        cout << "YES";
+    }else{
+        cout << "NO";
+    }
     
+
+
+
+
+
+
+
+    /*
     int n,m;
     cin >> n >> m;
     int sum = n + m;
@@ -37,6 +62,8 @@ NO*/
         sum_arr+=arr[i];
     }
     cout << sum_arr;
+    */
+
     
 
 

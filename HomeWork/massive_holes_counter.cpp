@@ -15,6 +15,8 @@ int main(){
 3*/
 
 
+    //ANSWER
+    
     int n;
     cin >> n;
     vector<int> arr(n);
@@ -23,7 +25,7 @@ int main(){
     }
     int count = 0;  
     for(int i = 1; i < n - 1; i++){
-        cout << arr[i] << " ";
+        //cout << arr[i] << " ";
         if(arr[i] < arr[i-1] && arr[i] < arr[i+1]){
             count++;
         }
