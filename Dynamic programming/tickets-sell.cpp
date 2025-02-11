@@ -29,25 +29,21 @@ int main(){
     // cout << min_time[n];
 
     int n;
-    cin>>n;
-    int a[n+1],b[n+1], c[n+1];
-
-    for(int i =1; i<=n; i++){
-        cin >> a[i] >> b[i] >> c[i];
-    }
-
+    cin>>n;    
+    int a[n+1], b[n+1], c[n+1];   
+  
+    for (int i=1; i<=n; i++)   cin>>a[i]>>b[i]>>c[i];  
+      
     int d[n+1];
-
-    d[1] = a[1];
-    d[2] = min(a[1] + a[2], b[1]);
-    d[3] = min(a[1] + a[2] + a[3], b[1] + a[3], c[1] + b[2]);
-
-    for(int k = 4; k<=n; k++){
-        d[k] = min(d[k - 1] + a[k], d[k - 2] + b[k - 1], d[k - 3] + c[k - 2]);
-    }
-    cout << d[n];
-
-
+    
+    d[1]=a[1];  d[2]=min(a[1]+a[2], b[1]);  
+    d[3]=min({a[1]+a[2]+a[3], b[1]+a[3], c[1], a[1]+b[2]});
+    
+    for(int k=4; k<=n; k++)
+    d[k]= min({ d[k-1]+a[k], d[k-2] + b[k-1], d[k-3] + c[k-2] });
+    
+    
+    cout<<d[n];
 
 
 
